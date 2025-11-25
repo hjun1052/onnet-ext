@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 12px; width: 320px; background: #0b1224; color: #e5e7eb; }
+      h1 { margin: 0 0 8px; font-size: 16px; }
+      label { font-size: 12px; color: #94a3b8; display: block; margin-top: 8px; }
+      input { width: 100%; padding: 8px; margin-top: 4px; border-radius: 8px; border: 1px solid #1f2937; background: #111827; color: #e5e7eb; }
+      button { margin-top: 12px; width: 100%; padding: 10px; border: none; border-radius: 10px; background: linear-gradient(120deg, #38bdf8, #6366f1); color: #fff; font-weight: 700; cursor: pointer; }
+      .hint { font-size: 11px; color: #94a3b8; margin-top: 6px; }
+      .status { font-size: 12px; margin-top: 10px; }
+    </style>
+  </head>
+  <body>
+    <h1>Onnet Playtime</h1>
+    <label>Onnet Base URL</label>
+    <input id="baseUrl" placeholder="http://localhost:3000" />
+
+    <label>추가할 게임 URL</label>
+    <input id="gameUrl" placeholder="https://example.com/game" />
+
+    <label>사용자 ID</label>
+    <input id="userId" type="number" min="1" value="1" />
+
+    <button id="saveBtn">게임 추가 및 트래킹 시작</button>
+    <div class="hint">페이지 메타(제목/og:image)를 읽어와 Onnet 라이브러리에 등록합니다.</div>
+    <div id="status" class="status"></div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
